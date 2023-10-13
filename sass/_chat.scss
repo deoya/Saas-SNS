@@ -1,0 +1,140 @@
+.chats .header {
+  padding: 0 16px;
+  height: 80px;
+  align-items: center;
+  background: white;
+}
+.chats {
+  margin:0;
+  .chat_title {
+    display: flex;
+    column-gap: 16px;
+  }
+  .preview_pic {
+  
+  }
+  .chat_headerTitle {
+    div {
+      @extend %double;
+      flex-direction: column;
+      .chat_title {
+        font-size: 1.2em;
+      }
+      .preview_msg .chat_num {
+      }
+    }
+  }
+}
+.bubble_container {
+  position: relative;
+  padding: 16px; 
+  height: calc(100vh - 225px);
+  overflow-y: auto; 
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  .bubble_preview {
+    display: flex;
+    padding: 16px 0;
+    column-gap: 16px;
+
+    .preview_column:first-child {
+    }
+    .bubble_wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .bubble_content {
+        display: flex;
+
+        .bubble_time { 
+          display: flex;
+          align-items: flex-end;
+          font-size: 0.7em;
+          color: $gray5;
+          white-space: nowrap;
+          padding-left: 8px;
+        }
+      }
+    }
+  }
+}
+
+.bubble {
+  background: $gray2;
+  //position: relative;
+  padding: 10px;
+  margin-top: 5px;
+  max-width: 640px;
+  border-radius: 12px;
+  word-break: break-all;
+  // &::before {
+  //   display: block;
+  //   content: '';
+  //   @include set-box (0px, 0px);
+  //   position: absolute;
+  //   top: 5px; left: -9px;
+  //   border-bottom: 10px solid transparent;
+  //   border-right: 10px solid $gray2;
+  // }
+}
+
+.bubble_preview.my_bubble {
+  position: absolute;
+  right: 16px;
+  .preview_pic, .preview_nink {
+    display: none;
+  }
+  .bubble_content {
+    flex-direction: row-reverse;
+    column-gap: 10px;
+    .bubble {
+      background: $bg-carrot3;
+    }
+  }
+}
+
+
+.chat_form {
+  padding: 10px;
+  margin: 10px;
+  height: 145px;
+  border: 1px solid $gray6;
+  border-radius: 16px;
+  .chat_formMsg {
+    @include set-box (100%, 75px);
+    border: none;
+    outline: none;
+  }
+  .chat_formUtill {  
+    @extend %double;
+    align-items: center;
+    
+    
+    .chat_formUtillPlugin {
+      i {
+        margin-right: 10px;
+        color: $gray5;
+        &:hover {
+          color: $gray6;
+        }
+      }
+    }
+    .chat_formUtillSubmit {
+      .chat_formBtn {
+        @include set-box (70px, 30px, 6px);
+        border: none;
+        background: $bg-carrot2;
+        color: white;
+        &:hover {
+          background: $bg-carrot3;
+        }
+      }
+    }
+  }
+}
+
+
+.null {
+  height: 10px;
+}

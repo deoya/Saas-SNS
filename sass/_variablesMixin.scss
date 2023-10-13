@@ -1,0 +1,27 @@
+$bg-color: white; //#FBF7F2;
+$bg-carrot: #F76706; 
+$bg-carrot2: #FF9E66;
+$bg-carrot3: #FF8A3D;
+
+$opacity1 : rgba(56, 30, 31, 0.2);
+$opacity2 : rgba(56, 30, 31, 0.1);
+
+$gray1 : #FBF7F2;
+$gray2 : #F5F4F8;
+$gray3: #EAEBEF;
+$gray4: #d5d6da;
+$gray5: #a0a1a5;
+$gray6: #878C92;
+
+@mixin set-box($width: 100%, $height: 100%, $border-radius:0) {
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+}
+
+%double {
+  display:flex;
+  justify-content: space-between;
+}
+
+
